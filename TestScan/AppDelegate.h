@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  TestScan
 //
-//  Created by 薛焱 on 16/1/20.
-//  Copyright © 2016年 薛焱. All rights reserved.
+//  Created by  on 16/1/20.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

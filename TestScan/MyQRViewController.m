@@ -10,7 +10,7 @@
 #import "LBXScanWrapper.h"
 
 
-@interface MyQRViewController ()
+@interface MyQRViewController ()<UIGestureRecognizerDelegate>
 
 //二维码
 @property (nonatomic, strong) UIView *qrView;
@@ -31,7 +31,19 @@
 
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    NSLog(@"1111");
 }
+
+
+    
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return  YES;
+}
+
+
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -51,11 +63,21 @@
     _qrImgView.center = CGPointMake(CGRectGetWidth(view.frame)/2, CGRectGetHeight(view.frame)/2);
     [view addSubview:_qrImgView];
     self.qrView = view;
-
-    UIImage *qrImg = [LBXScanWrapper createQRWithString:@"www.baidu.com" size:_qrImgView.bounds.size];
-    
-    UIImage *logoImg = [UIImage imageNamed:@"logo.JPG"];
-    _qrImgView.image = [LBXScanWrapper addImageLogo:qrImg centerLogoImage:logoImg logoSize:CGSizeMake(30, 30)];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *str = [user objectForKey:@"userName"];
+    NSString *str1 = [user objectForKey:@"lo"];
+    NSString *str2 = [NSString stringWithFormat:@"用户名%@  地址%@",str,str1];
+    if (str!=nil) {
+        UIImage *qrImg = [LBXScanWrapper createQRWithString:str2 size:_qrImgView.bounds.size];
+        UIImage *logoImg = [UIImage imageNamed:@"logo.JPG"];
+        _qrImgView.image = [LBXScanWrapper addImageLogo:qrImg centerLogoImage:logoImg logoSize:CGSizeMake(30, 30)];
+     }
+    else{
+        UIImage *qrImg = [LBXScanWrapper createQRWithString:@"测试数据" size:_qrImgView.bounds.size];
+        UIImage *logoImg = [UIImage imageNamed:@"logo.JPG"];
+        _qrImgView.image = [LBXScanWrapper addImageLogo:qrImg centerLogoImage:logoImg logoSize:CGSizeMake(30, 30)];
+    }
+   
     
 }
 

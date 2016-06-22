@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     LBXScanViewStyle *style = [[LBXScanViewStyle alloc]init];
     style.anmiationStyle = LBXScanViewAnimationStyle_LineMove;
     style.animationImage = [UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_light_green"];
@@ -33,6 +34,16 @@
     }
     
     self.view.backgroundColor = [UIColor blackColor];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"首页" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+    self.navigationController.delegate = self;
+    
+    
+}
+- (void)back
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    self.navigationController.navigationBarHidden=YES;
+    
 }
 
 
@@ -212,7 +223,14 @@
 - (void)myQRCode
 {
     MyQRViewController *vc = [MyQRViewController new];
+    vc.hidesBottomBarWhenPushed=YES;
+    
+    self.navigationController.navigationBarHidden=YES;
+    
     [self.navigationController pushViewController:vc animated:YES];
+    vc.hidesBottomBarWhenPushed=YES;
+    vc.navigationController.navigationBarHidden = NO;
+    
 }
 
 
