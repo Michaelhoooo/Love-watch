@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7D4E98CEFA0DE7AE3C1CA015E60B5D8304238AA2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7D4E98CEFA0DE7AE3C1CA015E60B5D8304238AA2" : 0,
+    "6884062D94605C8D01C2692B3685D964B8821F0C" : 0,
+    "A7AAF8D98F47E76639796CEB4820D0DDE5572376" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9C1F66AE-4A50-49CF-9859-4CED08ED884B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7D4E98CEFA0DE7AE3C1CA015E60B5D8304238AA2" : "TestScan\/",
+    "6884062D94605C8D01C2692B3685D964B8821F0C" : "SNLocation\/",
+    "A7AAF8D98F47E76639796CEB4820D0DDE5572376" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TestScan",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TestScan.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/WSeniOS\/SNLocation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6884062D94605C8D01C2692B3685D964B8821F0C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/757094197\/TestScan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7D4E98CEFA0DE7AE3C1CA015E60B5D8304238AA2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/757094197\/fish_yan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A7AAF8D98F47E76639796CEB4820D0DDE5572376"
+    }
+  ]
+}
